@@ -2,65 +2,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Zhouyi Zuo | Pianist</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function switchLang(lang) {
+      document.getElementById('bio-en').style.display = lang === 'en' ? 'block' : 'none';
+      document.getElementById('bio-cn').style.display = lang === 'cn' ? 'block' : 'none';
+    }
+  </script>
 </head>
 <body>
-  <header class="hero">
-    <img src="portrait.jpg" alt="Zhouyi Zuo" class="hero-img">
-    <div class="hero-text">
-      <h1>Zhouyi Zuo</h1>
-      <p>Pianist | Collaborator | Musician</p>
-    </div>
+  <header>
+    <h1>Zhouyi Zuo</h1>
+    <p>Pianist | Collaborator | Musician</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#media">Media</a>
+      <a href="#collaboration">Collaboration</a>
+      <a href="#contact">Contact</a>
+      <button onclick="switchLang('en')">English</button>
+      <button onclick="switchLang('cn')">中文</button>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#media">Media</a>
-    <a href="#collaboration">Collaboration</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="about" style="padding: 4em 10%; background-color: #fdfcf8; font-family: 'Georgia', serif; color: #2c2c2c;">
-  <h2 style="font-size: 2.5em; border-bottom: 2px solid #ccc; padding-bottom: 0.3em; margin-bottom: 1em;">Artist Biography</h2>
-  <p style="line-height: 1.8; font-size: 1.1em;">
-    Zhouyi Zuo is a Doctor of Musical Arts candidate in Piano Accompanying and Chamber Music at the Eastman School of Music, where he studies collaborative piano under Dr. Andrew Harley with a near-full scholarship and serves as his teaching assistant. He previously earned his Bachelor’s degree in Piano Performance from the Soochow University School of Music, studying under Dr. Yingying Su and Dr. Lo-An Lin. He later received his Master’s degree in Piano Performance from the University of Kansas, stud...
-  </p >
-  <p style="line-height: 1.8; font-size: 1.1em;">
-    As both a solo and collaborative pianist, Zuo has performed in prominent venues such as Swarthout Recital Hall (University of Kansas), Enling Arts Center (Soochow University), and the Lied Center of Kansas. Recent appearances include the University of Kansas Honors Recital (2023), a chamber concert at the St. Lawrence Catholic Center (2024), and the “Complete Beethoven Concerto” series under the direction of Dr. Yi-Yang Chen. He was a participant at the Montecito International Music Festival and has...
-  </p >
-  <p style="line-height: 1.8; font-size: 1.1em;">
-    Zuo has received numerous awards, including First Prize at the 10th Steinway National Youth Piano Competition (Suzhou Division) and an Excellence Award at the national finals. He is also a laureate of the Asian Music Competition, the Shanghai International Youth Piano Competition, and the Zhuhai Hengqin iMusic International Festival. In 2023, he won Second Place in the KMTA State Piano Competition and was invited to perform in the Chinese television program <em>Singer 2024</em>. His performances have...
-  </p >
-  <p style="line-height: 1.8; font-size: 1.1em;">
-    Specializing in collaborative piano and chamber repertoire, Zuo is experienced in partnering with instrumentalists and vocalists in recital, competition, and festival settings. His musical sensitivity, technical precision, and depth of expression have established him as a versatile and dedicated young artist. During his undergraduate years, he also served as Director of the Student Union’s Arts Committee at Soochow University, organizing concerts and programming. Zuo continues to broaden his artisti...
-  </p >
+  <section id="about">
+    <div id="bio-en" style="display: block;">
+      <h2>Artist Biography</h2>
+      <p>Zhouyi Zuo is a Doctor of Musical Arts candidate in Piano Accompanying and Chamber Music at the Eastman School of Music, where he studies collaborative piano under Dr. Andrew Harley with a near-full scholarship and serves as his teaching assistant. He previously earned his Bachelor’s degree in Piano Performance from the Soochow University School of Music, studying under Dr. Yingying Su and Dr. Lo-An Lin. He later received his Master’s degree in Piano Performance from the University of Kansas, studying with Dr. Yi-Yang Chen, and furthered his collaborative piano studies with Dr. Ellen Sommer and Professor Ted Taylor.</p>
+      <p>As both a solo and collaborative pianist, Zuo has performed in prominent venues such as Swarthout Recital Hall (University of Kansas), Enling Arts Center (Soochow University), and the Lied Center of Kansas. Recent appearances include the University of Kansas Honors Recital (2023), a chamber concert at the St. Lawrence Catholic Center (2024), and the “Complete Beethoven Concerto” series under the direction of Dr. Yi-Yang Chen. He was a participant at the Montecito International Music Festival and has performed in masterclasses for the Juilliard String Quartet and Professor John Parry, who described his playing as “exceptionally perfect.”</p>
+      <p>Zuo has received numerous awards, including First Prize at the 10th Steinway National Youth Piano Competition (Suzhou Division) and an Excellence Award at the national finals. He is also a laureate of the Asian Music Competition, the Shanghai International Youth Piano Competition, and the Zhuhai Hengqin iMusic International Festival. In 2023, he won Second Place in the KMTA State Piano Competition and was invited to perform in the Chinese television program Singer 2024. His performances have been praised by esteemed pianists, including Professor Li Jian, who commended his “exquisitely refined control.”</p>
+      <p>Specializing in collaborative piano and chamber repertoire, Zuo is experienced in partnering with instrumentalists and vocalists in recital, competition, and festival settings. His musical sensitivity, technical precision, and depth of expression have established him as a versatile and dedicated young artist. During his undergraduate years, he also served as Director of the Student Union’s Arts Committee at Soochow University, organizing concerts and programming. Zuo continues to broaden his artistic reach through a wide range of collaborative and solo performances, embracing the full expressive potential of the piano across diverse musical landscapes.</p>
+    </div>
+    <div id="bio-cn" style="display: none;">
+      <h2>艺术家简介</h2>
+      <p>左周易现为美国伊士曼音乐学院钢琴伴奏与室内乐博士在读，主修协作钢琴，师从Harley博士，获近全额奖学金，并担任其助教。他本科毕业于中国苏州大学音乐学院，曾师从苏莹莹博士与林洛安博士，硕士阶段于堪萨斯大学攻读钢琴表演，师从陈逸阳博士，并在协作钢琴领域师从Ellen Sommer博士与Ted Taylor教授。学习期间，左周易展现出卓越的独奏与合作能力，广受教授与业界认可。</p>
+      <p>他活跃于各类独奏与合作音乐舞台，演出足迹包括堪萨斯大学Swarthout Recital Hall、苏州大学恩玲艺术中心及堪萨斯州的Lied Center等地。近年来受邀参与多个重要演出项目，包括堪萨斯大学荣誉音乐会（2023）、St. Lawrence Catholic Center 室内乐音乐会（2024）、由陈逸阳博士主持的“贝多芬协奏曲全集”演出项目等。他曾参加Montecito国际音乐节，并受邀参与茱莉亚弦乐四重奏与John Parry教授的大师班，其表现获高度评价。</p>
+      <p>在专业比赛方面，左周易曾荣获第十届施坦威全国青少年钢琴比赛（苏州赛区）一等奖及总决赛优秀表演奖，亦在亚洲音乐大赛、上海国际青少年钢琴比赛及珠海横琴iMusic国际音乐节中获得多项大奖。2023年荣获KMTA钢琴比赛全州赛第二名，并于2024年参与湖南卫视音乐综艺《歌手2024》的节目录制。其演奏曾获李坚教授称誉“处理极其细腻”，John Parry教授更赞其为“完美无瑕”的现场表现。</p>
+      <p>除独奏外，左周易专注于协作钢琴与室内乐实践，具备与各类器乐及声乐演奏者密切合作的经验。他曾担任苏州大学学生会文艺部部长，策划多场校内外演出活动，具备出色的组织能力与团队协作意识。他持续拓展演出边界，兼具音乐性、敏感度与舞台表现力，展现出一位青年协作钢琴家的专业成熟度与发展潜力。</p>
+    </div>
   </section>
 
   <section id="media">
     <h2>Media</h2>
-    <p>Visit my YouTube Channel:</p>
-    <a href="https://youtube.com/@zhouyizuo?si=r7zF0whZfKW97qce" target="_blank">youtube.com/@zhouyizuo</a>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/OOLGo7hAfjQ" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/DtY1_9M7sUg" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/SZVY1hcS4N4" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/EfNlBbWifBE" frameborder="0" allowfullscreen></iframe>
   </section>
 
   <section id="collaboration">
     <h2>Collaboration</h2>
-    <p>If you’re interested in working with me, please fill out the form with your information, including name, time, location, piece name, instrument, duration, and intended use.</p>
-    <p><strong>Form Link:</strong> [请插入你的表单链接]</p>
+    <form action="https://formspree.io/f/mwkgrbgl" method="POST">
+      <label>Name: <input type="text" name="name" required></label><br>
+      <label>Time: <input type="text" name="time" required></label><br>
+      <label>Location: <input type="text" name="location" required></label><br>
+      <label>Piece Name: <input type="text" name="piece" required></label><br>
+      <label>Instrument: <input type="text" name="instrument" required></label><br>
+      <label>Duration: <input type="text" name="duration" required></label><br>
+      <label>Intended Use: <input type="text" name="use" required></label><br>
+      <button type="submit">Submit</button>
+    </form>
+    <p><em>Thank you for your message! I will be in touch shortly.</em></p>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: collabozhouyi@gmail.com</p>
+    <p>Email: collabzhouyi@gmail.com</p>
     <p>WeChat: ZyZuo05</p>
     <p>Redbook (小红书): ZyZuo🎹</p>
   </section>
-
-  <footer>
-    <p>&copy; 2025 Zhouyi Zuo. All rights reserved.</p>
-  </footer>
 </body>
 </html>
-    
